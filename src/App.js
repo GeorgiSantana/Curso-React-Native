@@ -3,12 +3,14 @@ import {View, StyleSheet} from 'react-native';
 //import X, {Comp1, Comp2} from './components/Multi';
 //import Primeiro from './components/Primeiro';
 import MinMax from './components/MinMax';
+import Aleatorio from './components/Aleatorio';
 
 export default () => (
   <View style={style.App}>
-    <MinMax min={3} max={20} />
+    <Aleatorio min={10} max={60}/>
+    {/*<MinMax min={3} max={20} />
     <MinMax min="1" max="94" />
-    {/*<X />
+    <X />
     <Comp1 />
     <Comp2 />
 <Primeiro */}
