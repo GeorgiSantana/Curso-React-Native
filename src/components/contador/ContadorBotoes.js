@@ -12,6 +12,6 @@ export default props => {
 
 const style = StyleSheet.create({
   Botoes: {
-    flexDirection: "row"
-  }
+    flexDirection: 'row',
+  },
 });
