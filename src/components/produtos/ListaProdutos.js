@@ -10,6 +10,7 @@ export default props => {
         <Text key={p.id}>
           {p.id} {p.nome} tem preço R$ {p.preco}
         </Text>
+        
       );
     });
   }
