@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, SafeAreaView} from 'react-native';
 //import DigiteSeuNome from './components/DigiteSeuNome';
-import Quadrado from './components/layout/Quadrado';
+import FlexV1 from './components/layout/FlexBoxV1';
 //import UsuarioLogado from './components/UsuarioLogado';
 //import ListaProdutos from './components/produtos/ListaProdutos';
 //import ListaProdutosV2 from './components/produtos/ListaProdutosV2';
@@ -22,10 +22,7 @@ import Quadrado from './components/layout/Quadrado';
 
 export default () => (
   <SafeAreaView style={style.App}>
-    <Quadrado />
-    <Quadrado cor="#900" />
-    <Quadrado cor="#090" />
-    <Quadrado cor="#009" />
+    <FlexV1 />
 
     {/*
     <DigiteSeuNome />
