@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, SafeAreaView} from 'react-native';
 //import DigiteSeuNome from './components/DigiteSeuNome';
-import FlexV3 from './components/layout/FlexBoxV3';
+import FlexV4 from './components/layout/FlexBoxV4';
 //import UsuarioLogado from './components/UsuarioLogado';
 //import ListaProdutos from './components/produtos/ListaProdutos';
 //import ListaProdutosV2 from './components/produtos/ListaProdutosV2';
@@ -22,7 +22,7 @@ import FlexV3 from './components/layout/FlexBoxV3';
 
 export default () => (
   <SafeAreaView style={style.App}>
-    <FlexV3 />
+    <FlexV4 />
 
     {/*
     <FlexV1 />
