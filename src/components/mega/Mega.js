@@ -7,19 +7,22 @@ export default class Mega extends Component {
     qtdeNumeros: this.props.qtdeNumeros,
   };
 
-  alterarQtdeNumeros(qtde) {
+  alterarQtdeNumeros = qtde => {
     this.setState({qtdeNumeros: qtde});
-  }
+  };
   render() {
     return (
       <>
         <Text style={Estilo.txtG}>
           Gerador de Mega-Sena
-          {this.props.qtdeNumeros}
+          {this.state.qtdeNumeros}
         </Text>
         <TextInput
+          keyboardType={'numeric'}
+          // eslint-disable-next-line react-native/no-inline-styles
+          style={{borderBottomWidth: 1}}
           placeholder="Qtde de Números"
-          value={this.state.qtdeNemeros}
+          value={this.state.qtdeNumeros}
           onChangeText={qtde => this.alterarQtdeNumeros(qtde)}
         />
       </>
