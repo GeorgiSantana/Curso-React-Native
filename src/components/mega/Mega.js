@@ -16,11 +16,25 @@ export default class Mega extends Component {
     const novo = parseInt(Math.random() * 60) + 1;
     return nums.includes(novo) ? this.gerarNumeroNaoContido(nums) : novo;
   };
-
+  
+  //gerarNumeros = () => {
+  //const numeros = Array(this.state.qtdeNumeros)
+  //.fill()
+  //.reduce(n => [...n, this.gerarNumeroNaoContido(n)], []);
+  // this.setState({numeros});
+  //};
+  
+  //Modo alternativo parar gerar numeros usando uma forma procedural
   gerarNumeros = () => {
-    const numeros = Array(this.state.qtdeNumeros)
-      .fill()
-      .reduce(n => [...n, this.gerarNumeroNaoContido(n)], []);
+    const {qtdeNumeros} = this.state;
+    const numeros = [];
+
+    for (let i = 0; i < qtdeNumeros; i++) {
+      const n = this.gerarNumeroNaoContido(numeros);
+      numeros.push(n);
+    }
+
+    numeros.sort((a, b) => a - b);
     this.setState({numeros});
   };
 
