@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {Button, Text, TextInput} from 'react-native';
+import {Button, Text, TextInput, View} from 'react-native';
 import Estilo from '../estilo';
+import Numero from './Numero';
 
 export default class Mega extends Component {
   state = {
@@ -38,6 +39,13 @@ export default class Mega extends Component {
     this.setState({numeros});
   };
 
+  exibirNumeros = () => {
+    const nums = this.state.numeros
+    return nums.map(num => {
+      return <Numero num ={num} />
+    })
+  }
+
   render() {
     return (
       <>
@@ -50,9 +58,20 @@ export default class Mega extends Component {
           value={`${this.state.qtdeNumeros}`}
           onChangeText={this.alterarQtdeNumeros}
         />
-        <Button title="Gerar" onPress={this.gerarNumeros} />
-        <Text>{this.state.numeros.join(' , ')}</Text>
-      </>
+
+        <Button title="Gerar" 
+        onPress={this.gerarNumeros}/>
+         
+         <View style={{
+          marginTop: 20,
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          justifyContent: 'center'
+         }}>
+             {this.exibirNumeros()}
+         </View>
+        
+    </>
     );
   }
 }
